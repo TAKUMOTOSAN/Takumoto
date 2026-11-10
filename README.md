@@ -6,7 +6,7 @@
 
 ## Скачать
 
-Архив с сайтом: [classkeeper.zip](https://github.com/TAKUMOTOSAN/Takumoto/releases/latest/download/classkeeper.zip)
+Архив с сайтом: [classkeeper.zip (v2.0.0)](https://github.com/TAKUMOTOSAN/Takumoto/releases/download/v2.0.0/classkeeper.zip)
 
 Или скачайте весь репозиторий:
 ```bash

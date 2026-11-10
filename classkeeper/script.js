@@ -1,11 +1,12 @@
-// ClassKeeper сайт — простая интерактивность
+// ClassKeeper сайт — минимальная интерактивность
 document.addEventListener("DOMContentLoaded", () => {
-    // Плавная прокрутка для внутренних ссылок
+    // Плавная прокрутка для якорей
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
+            const href = this.getAttribute("href");
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({ behavior: "smooth" });
             }
         });
@@ -25,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
         { threshold: 0.1 }
     );
 
-    document.querySelectorAll(".card, .coupon-card").forEach((card) => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(20px)";
-        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(card);
+    document.querySelectorAll(".card, .step").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(el);
     });
 });
