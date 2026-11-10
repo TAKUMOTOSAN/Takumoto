@@ -339,3 +339,100 @@ body {
     .nav { justify-content: center; flex-wrap: wrap; }
     .about-inner { grid-template-columns: 1fr; }
 }
+
+/* Шумомер / Зачем нужен сервис */
+.shumometer {
+    padding: 64px 0;
+    background: var(--bg);
+}
+.shumometer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.shumometer-lead {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 10px 0 18px 0;
+    font-size: 1rem;
+}
+.scenarios {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 24px 0;
+    color: var(--text-muted);
+}
+.scenarios li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+}
+.scenarios li:last-child { border-bottom: none; }
+.shumometer-steps h3 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+.shumometer-steps .step {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
+.shumometer-steps .step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.shumometer-steps .step-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+.shumometer-steps .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Конфиденциальность */
+.privacy {
+    padding: 56px 0;
+    background: var(--surface);
+}
+.privacy-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.privacy-text h3 {
+    margin-bottom: 14px;
+    font-size: 1.25rem;
+}
+.privacy-text p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+.privacy-devices h3 {
+    margin-bottom: 14px;
+    font-size: 1.25rem;
+}
+.privacy-devices p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .shumometer-inner,
+    .privacy-inner {
+        grid-template-columns: 1fr;
+    }
+}
